@@ -1,0 +1,52 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Arduino Project
+    link(href="stylesheets/index.css", rel="stylesheet", type="text/css")
+  body
+    .user-interface
+      .user-interface-title
+        h1 Simulation d'une scène avec un feu tricolore connecté
+      .user-interface-body
+        input#addWalker.interface-button(type="button", value="Ajout d'un piéton")
+        input#addCar.interface-button(type="button", value="Ajout d'un véhicule")
+        input#moveWalker.interface-button(type="button", value="Déplacement du (ou des) piéton(s)")
+        input#moveCar.interface-button(type="button", value="Déplacement du (ou des) véhicule(s)")
+        p#numberWalker 0
+        p#numberCar 0
+        input#chartWalker.interface-button(type="button", value="Graphiques")
+        input#chartCar.interface-button(type="button", value="Graphique")
+    .plateform
+      .road
+        .shadow
+      .crosswalk
+      .traffic-light
+        input#trafficLight1.traffic-light-input.color1(type="radio", name="traffic-light-color")
+        input#trafficLight2.traffic-light-input.color2(type="radio", name="traffic-light-color")
+        input#trafficLight3.traffic-light-input.color3(type="radio", name="traffic-light-color", checked)
+      .traffic-light-bar
+      .traffic-light-walker
+        input#trafficLightWalker1.traffic-light-walker-input.color3(type="radio", name="traffic-light-color", checked)
+        input#trafficLightWalker2.traffic-light-walker-input.color1(type="radio", name="traffic-light-color")
+      .traffic-light-bar-walker
+      #walker.human
+        .human-head
+        .human-body
+        .human-arm-1
+        .human-arm-2
+        .human-leg-1
+        .human-leg-2
+      #car.car
+        img#carImg.car-img(src="pictures/car.png", alt="car")
+    #walkerBarChart
+      canvas#walkerChartBar
+    #walkerPieChart
+      canvas#walkerChartPie
+    #carBarChart
+      canvas#carChartBar
+    script(src="javascripts/winbox.bundle.js")
+    script(type="module" src="javascripts/index.js")
+    script(src="https://cdn.jsdelivr.net/npm/chart.js")

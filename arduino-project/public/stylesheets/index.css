@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(#ede6df, #C1AC95);
+  overflow: hidden;
+}
+
+.user-interface {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.user-interface-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 24px;
+  color: #333333;
+  margin-bottom: 55px;
+}
+
+.user-interface-body {
+  display: grid;
+  grid-template-columns: auto auto;
+  text-align: center;
+}
+
+.user-interface-body input,
+.user-interface-body p {
+  margin: 10px 15px;
+}
+
+.user-interface-body p {
+  color: #333333;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.interface-button {
+  background: none;
+  color: #333333;
+  border: none;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+}
+
+.plateform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin-top: -175px;
+}
+
+.road {
+  position: relative;
+  width: 800px;
+  height: 160px;
+  background: #525252;
+  transform-origin: bottom;
+  transform-style: preserve-3d;
+  transform: perspective(500px) rotateX(30deg);
+}
+
+.road:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(90deg, #FFF 0%, #FFF 70%, #525252 70%, #525252 100%);
+  background-size: 120px;
+}
+
+.road:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  background: #333;
+  bottom: -30px;
+  transform-origin: top;
+  transform: perspective(500px) rotateX(-25deg);
+}
+
+.shadow {
+  position: absolute;
+  bottom: -93px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  height: 60px;
+  background: linear-gradient(#000, transparent);
+  opacity: 0.5;
+}
+
+.crosswalk {
+  position: absolute;
+  width: 100px;
+  height: 160px;
+  background: transparent;
+  transform-origin: bottom;
+  transform-style: preserve-3d;
+  transform: perspective(500px) rotateX(30deg);
+}
+
+.crosswalk:before {
+  content: '';
+  position: absolute;
+  transform: rotate(90deg);
+  left: -29px;
+  top: 30px;
+  width: 160px;
+  height: 100px;
+  background-image: repeating-linear-gradient(to right, white 0%, white 70%, #525252 70%, #525252 100%);
+  background-size: 35px;
+}
+
+.traffic-light {
+  position: absolute;
+  display: block;
+  margin-top: -210px;
+  margin-left: -100px;
+  background-color: #333;
+  width: 20px;
+  height: 50px;
+  /*border-radius:10px;*/
+  box-shadow: 2px 2px 2px #525252;
+}
+
+.traffic-light-walker {
+  position: absolute;
+  display: block;
+  margin-top: -167px;
+  margin-left: 100px;
+  padding-left: 4px;
+  background-color: #333;
+  width: 30px;
+  height: 20px;
+  /*border-radius:10px;*/
+  box-shadow: 2px 2px 2px #525252;
+}
+
+.traffic-light-bar {
+  position: absolute;
+  display: block;
+  margin-top: -120px;
+  margin-left: -100px;
+  background-color: #333;
+  width: 5px;
+  height: 42px;
+  box-shadow: 2px 2px 2px #525252;
+}
+
+.traffic-light-bar-walker {
+  position: absolute;
+  display: block;
+  margin-top: -113px;
+  margin-left: 100px;
+  background-color: #333;
+  width: 5px;
+  height: 35px;
+  box-shadow: 2px 2px 2px #525252;
+}
+
+.traffic-light-input {
+  appearance: none;
+  position: relative;
+  width: 10px;
+  height: 10px;
+  margin-top: 5px;
+  margin-left: 5px;
+  background-color: grey;
+  border-radius: 100%;
+  display: block;
+}
+
+.traffic-light-walker-input {
+  appearance: none;
+  position: relative;
+  width: 10px;
+  height: 10px;
+  margin-top: 5.25px;
+  margin-right: 3px;
+  background-color: grey;
+  border-radius: 100%;
+}
+
+.color1 {
+  background-color: #500000;
+}
+
+.color1-select {
+  box-shadow: 0 0 10em #f33;
+  background-color: #FF0000;
+}
+
+.color2 {
+  background-color: #505000;
+}
+
+.color2-select {
+  box-shadow: 0 0 10em #ff3;
+  background-color: #FFFF00;
+}
+
+.color3 {
+  background-color: #005000;
+}
+
+.color3-select {
+  box-shadow: 0 0 10em #3f3;
+  background-color: #00FF00;
+}
+
+.human {
+  position: absolute;
+  margin-top: -145px;
+  margin-left: 10px;
+  display: none;
+}
+
+.human-animation {
+  animation: human-move 4s;
+}
+
+@keyframes human-move {
+  from { transform: translateY(0px); }
+  to { transform: translateY(120px); }
+  0% { opacity: 1; }
+  75% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.human-head {
+  background: #808080;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.human-body {
+  background: #808080;
+  width: 15px;
+  height: 30px;
+  border-radius: 8px;
+}
+
+.human-arm-1 {
+  background: #808080;
+  width: 20px;
+  height: 4px;
+  border-radius: 10px;
+  margin-left: -10.5px;
+  margin-top: -20px;
+  transform: rotate(-65deg);
+}
+
+.human-arm-2 {
+  background: #808080;
+  width: 20px;
+  height: 4px;
+  border-radius: 10px;
+  margin-left: 6px;
+  margin-top: -4px;
+  transform: rotate(-115deg);
+}
+
+.human-leg-1 {
+  background: #808080;
+  width: 5px;
+  height: 25px;
+  border-radius: 10px;
+  margin-left: 2px;
+  margin-top: 12px;
+}
+
+.human-leg-2 {
+  background: #808080;
+  width: 4.5px;
+  height: 25px;
+  border-radius: 10px;
+  margin-left: 8px;
+  margin-top: -25px;
+}
+
+.car {
+  position: absolute;
+  display: none;
+}
+
+.car-img {
+  width: 100px;
+  margin-top: 95px;
+  margin-left: -400px;
+}
+
+.car-position-base {
+  transform: translateX(0px);
+}
+
+.car-position-middle {
+  transform: translateX(230px);
+}
+
+.car-position-final {
+  transform: translateX(690px);
+}
+
+.car-animation-1 {
+  animation: car-move-1 3s;
+}
+
+@keyframes car-move-1 {
+  from { transform: translateX(0px); }
+  to { transform: translateX(230px); }
+}
+
+.car-animation-2 {
+  animation: car-move-2 5s;
+}
+
+@keyframes car-move-2 {
+  from { transform: translateX(230px); }
+  to { transform: translateX(690px); }
+  0% { opacity: 1; }
+  75% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.wb-body {
+  display: flex;
+  justify-content: center;
+}
+
+#walkerBarChart {
+  width:400px;
+}
+
+#walkerPieChart {
+  width:350px;
+}
+
+#carBarChart {
+  width:400px;
+}
+.wb-title {
+  font-family: 'Poppins', sans-serif;
+}
+
+.wb-body {
+  background: #ede6df;
+}
