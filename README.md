@@ -1,18 +1,17 @@
-<div align="center">
+<p align="center">
+    <h1 align="center">Arduino Project - Internet of Things</h1>
+    <h4 align="center">Simulation of a scene with a connected traffic light with an Arduino Uno</h4>
+</p>
 
-# Arduino Project - Internet of Things
-
-### Simulation of a scene with a connected traffic light with an Arduino Uno
-
-<img alt="Arduino" src="https://img.shields.io/badge/-Arduino-199097?style=flat&logo=arduino&logoColor=white" />
-<img alt="CSS3" src="https://img.shields.io/badge/-CSS3-0068BA?style=flat&logo=css3&logoColor=white" />
-<img alt="Docker" src="https://img.shields.io/badge/-Docker-2491E6?style=flat&logo=docker&logoColor=white" />
-<img alt="Express" src="https://img.shields.io/badge/-Express-666666?style=flat&logo=express&logoColor=white" />
-<img alt="Javascript" src="https://img.shields.io/badge/-Javascript-EFD81D?style=flat&logo=javascript&logoColor=white" />
-<img alt="NPM" src="https://img.shields.io/badge/-NPM-C53635?style=flat&logo=npm&logoColor=white" />
-<img alt="Pug" src="https://img.shields.io/badge/-Pug-52302E?style=flat&logo=pug&logoColor=white" />
-
-</div>
+<p align="center">
+    <img alt="Arduino" src="https://img.shields.io/badge/-Arduino-199097?style=flat&logo=arduino&logoColor=white" />
+    <img alt="CSS3" src="https://img.shields.io/badge/-CSS3-0068BA?style=flat&logo=css3&logoColor=white" />
+    <img alt="Docker" src="https://img.shields.io/badge/-Docker-2491E6?style=flat&logo=docker&logoColor=white" />
+    <img alt="Express" src="https://img.shields.io/badge/-Express-666666?style=flat&logo=express&logoColor=white" />
+    <img alt="Javascript" src="https://img.shields.io/badge/-Javascript-EFD81D?style=flat&logo=javascript&logoColor=white" />
+    <img alt="NPM" src="https://img.shields.io/badge/-NPM-C53635?style=flat&logo=npm&logoColor=white" />
+    <img alt="Pug" src="https://img.shields.io/badge/-Pug-52302E?style=flat&logo=pug&logoColor=white" />
+</p>
 
 <table>
     <thead>
@@ -80,6 +79,8 @@ node arduino.js
 Finally, we can open the link [following](http://localhost:3001/) and access the web interface.
 
 ## Visual of the web interface
+
+The web interface is in French
 
 <div align="center">
 <img title="Web interface" src="assets/preview.png" alt="Web interface" width="600px" />
