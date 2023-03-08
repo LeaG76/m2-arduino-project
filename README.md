@@ -34,15 +34,7 @@
     </tbody>
 </table>
 
-### Contents
-
-1. [Project display](#project-display)
-2. [Sketch](#sketch)
-3. [Configuration](#configuration)
-4. [Visual of the web interface](#visual-of-the-web-interface)
-5. [Sources](#sources)
-
-## Project display
+## About
 
 The aim of the project is to detect the number of vehicles approaching the traffic light as well as the number of walkers waiting at the walker crossing. When the walker wants to cross, we will compare his two values ​​and if there are more walkers than vehicles then the light will turn red for vehicles and green for walkers.
 
@@ -58,7 +50,7 @@ Here is a diagram summarizing the circuit made on the Arduino Uno:
 <img title="Diagram circuit Arduino" src="assets/layout.png" alt="Diagram circuit Arduino" width="400px" />
 </div>
 
-## Configuration
+## Get started
 
 Launch the sketch in the Arduino IDE available here: `assets/sketch_traffic_light.ino`
 
